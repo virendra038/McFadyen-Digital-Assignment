@@ -1,24 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
-
+import Header from './components/header/Header';
+import Main from './components/main/Main';
+import ProductList from './components/productList/ProductList';
+import { VStack, Box } from '@chakra-ui/react';
+import { useRef } from 'react';
 function App() {
+  const scrollableRef = useRef(null);
+
+  const handleScroll = (event) => {
+    // Propagate the scroll event to the scrollable element
+    if (scrollableRef.current) {
+      scrollableRef.current.scrollTop += event.deltaY;
+    }
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <VStack alignItems={'flex-start'} height={'100vh'} onWheel={handleScroll}>
+      <Box display={{ base: 'none', md: 'block' }}><Header/></Box>
+      <Box><Main scrollableRef={scrollableRef}/></Box>
+      {/* <ProductList/> */}
+    </VStack>
   );
 }
 

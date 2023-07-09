@@ -1,0 +1,12 @@
+.active{
+    border: 1px solid;
+}
+
+.color_image{
+    padding: 5px;
+}
+
+.color_images img{
+    padding: 5px;
+    cursor: pointer;
+}

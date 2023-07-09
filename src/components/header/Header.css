@@ -1,0 +1,26 @@
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    height: 50px;
+    z-index: 2; /* Ensure the header is above the grid */
+}
+
+.shortcuts{
+    display: inline-block;
+    margin: 5px;
+    padding: 5px;
+}
+
+.shortcuts a{
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.profile {
+    margin-right: 5px;
+    font-size: 20px;
+    float: right;
+}

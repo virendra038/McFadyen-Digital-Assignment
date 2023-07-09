@@ -1,0 +1,13 @@
+
+  .images_container img{
+    padding: 10px;
+    margin: 10px;
+  }
+
+  .carousel-button{
+    font-size: 3em;
+  }
+
+  .carousel-button-group{
+    text-align: center;
+  }

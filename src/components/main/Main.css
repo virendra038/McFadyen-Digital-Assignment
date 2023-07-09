@@ -1,0 +1,31 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  height: calc(100vh - 50px); /* Subtract the header height from the grid container */
+  margin-top: 50px;
+}
+
+.grid-item {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+  background-color: #f9f9f9;
+  z-index: 1; /* Ensure the sticky items are below the scrollable item */
+}
+
+.scrollable {
+  overflow-y: auto;
+}
+
+  .scrollable::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .scrollable {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
